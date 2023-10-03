@@ -4,15 +4,18 @@ import Navbar from "../Components/Navbar/Navbar";
 import { Helmet } from "react-helmet";
 import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
 import LeftSideNav from "../Components/LeftSideNav/LeftSideNav";
+import { useLoaderData } from "react-router-dom";
+import News from "../Components/News/News";
 
 const Home = () => {
+  const allNews = useLoaderData();
   return (
     <div className="max-w-screen-2xl mx-auto px-4 my-5">
       <Helmet>
         <title>Home</title>
       </Helmet>
       <Header />
-      <div className="flex items-center mt-7">
+      <div className="flex items-center">
         <button className="btn btn-sm text-white hover:bg-rose-700 bg-rose-400 ">
           Latest
         </button>
@@ -27,7 +30,13 @@ const Home = () => {
       <Navbar />
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
         <div><LeftSideNav/></div>
-        <div className="lg:col-span-2 border">middle</div>
+        <div className="lg:col-span-2 border">
+        {
+              allNews.map(news => {
+                return <News key={news._id} news={news}/>
+              })
+            }
+        </div>
         <div><RIghtSideNav/></div>
       </div>
     </div>
