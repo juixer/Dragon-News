@@ -9,13 +9,25 @@ import qZone1 from "../../assets/qZone1.png";
 import qZone2 from "../../assets/qZone2.png";
 import qZone3 from "../../assets/qZone3.png";
 import adBg from "../../assets/bg.png";
+import useAuth from "../../Hook/useAuth";
+import { toast } from "react-toastify";
 const RIghtSideNav = () => {
   const bg = {
     backgroundImage: `url(${adBg})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
-
+// google login
+const {googleLogIn} = useAuth();
+const handleGoogleLogin = () => {
+    googleLogIn()
+    .then(() => {
+      toast.success('Login successful')
+    })
+    .catch((err) => {
+      toast.error(err.message)
+    })
+}
   return (
     <div className="m-3 lg:sticky lg:top-5">
       <div className="h-[900px] lg:overflow-y-scroll">
@@ -23,7 +35,7 @@ const RIghtSideNav = () => {
           <h1 className="text-2xl text-center lg:text-left font-semibold">
             Login With
           </h1>
-          <button className="btn text-lg bg-white  border border-sky-500 text-sky-500 w-full">
+          <button onClick={handleGoogleLogin} className="btn text-lg bg-white  border border-sky-500 text-sky-500 w-full">
             <FaGoogle />
             Login with Google
           </button>
