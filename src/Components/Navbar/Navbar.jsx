@@ -1,12 +1,20 @@
-import { NavLink } from "react-router-dom";
-import profile from '../../assets/user.png'
+import { Link, NavLink } from "react-router-dom";
+import profile from "../../assets/user.png";
 
 const Navbar = () => {
-    const navLinks = <>
-    <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/about'}>About</NavLink></li>
-    <li><NavLink to={'/career'}>Career</NavLink></li>
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to={"/"}>Home</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/about"}>About</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/career"}>Career</NavLink>
+      </li>
     </>
+  );
   return (
     <div className="navbar bg-base-100 my-3">
       <div className="navbar-start">
@@ -31,22 +39,20 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {
-            navLinks
-          }
+            {navLinks}
           </ul>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {
-            navLinks
-          }
-        </ul>
+        <ul className="menu menu-horizontal text-xl px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end space-x-5">
-        <img className="w-10" src={profile}/>
-        <a className="btn bg-black hover:bg-slate-700 text-white btn-sm">Login</a>
+        <img className="w-10" src={profile} />
+        <Link to={'/login'}>
+          <p className="btn bg-black hover:bg-slate-700 text-white btn-sm">
+            Login
+          </p>
+        </Link>
       </div>
     </div>
   );

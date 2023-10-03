@@ -34,12 +34,12 @@ const CategoryPage = () => {
               <div className="mx-3" key={idx}>
                 <div className="card  mb-10 bg-base-100 shadow-xl">
                   <div className="flex rounded-t-xl justify-between items-center p-3 bg-slate-100">
-                    <div className="flex gap-5">
+                    <div className="flex gap-2 items-center">
                       <img
-                        className="w-12 rounded-full"
+                        className="w-10 h-10 lg:h-auto rounded-full"
                         src={news.author.img}
                       ></img>
-                      <div className="flex justify-center items-center flex-col">
+                      <div className="flex justify-center flex-col">
                         <p>
                           {news.author.name ? news.author?.name : "Unknown"}
                         </p>
@@ -50,7 +50,7 @@ const CategoryPage = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-2">
                       <span>
                         <FaBookmark />
                       </span>

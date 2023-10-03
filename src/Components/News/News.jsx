@@ -8,14 +8,14 @@ const News = ({ news }) => {
     <div className="mx-3">
       <div className="card  mb-10 bg-base-100 shadow-xl">
       <div className="flex rounded-t-xl justify-between items-center p-3 bg-slate-100">
-            <div className="flex gap-5">
-              <img className="w-12 rounded-full" src={author.img}></img>
-              <div className="flex justify-center items-center flex-col">
+            <div className="flex items-center gap-2">
+              <img className="w-12 h-10 lg:h-auto rounded-full" src={author.img}></img>
+              <div className="flex justify-center flex-col">
                 <p>{author.name ? author?.name : 'Unknown'}</p>
                 <p>{author.published_date ? author?.published_date : "N/A"}</p>
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-2">
                 <span><FaBookmark/></span>
                 <span><FaShareNodes/></span>
             </div>

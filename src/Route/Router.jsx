@@ -3,6 +3,8 @@ import Root from "../Layout/Root";
 import Home from "../Pages/Home";
 import NewsDetails from "../Pages/NewsDetails";
 import CategoryPage from "../Pages/CategoryPage";
+import LogIn from "../Pages/LogIn";
+import Register from "../Pages/Register";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +24,14 @@ const Router = createBrowserRouter([
           element: <CategoryPage/>,
           loader: () => fetch('../news.json')
 
+        },
+        {
+          path:'/login',
+          element:<LogIn/>
+        },
+        {
+          path:'/register',
+          element:<Register/>
         }
     ]
   },
