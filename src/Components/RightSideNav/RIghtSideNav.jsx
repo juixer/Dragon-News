@@ -17,17 +17,28 @@ const RIghtSideNav = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
-// google login
-const {googleLogIn} = useAuth();
-const handleGoogleLogin = () => {
+  // google login
+  const { googleLogIn, githubLogIn } = useAuth();
+  // google
+  const handleGoogleLogin = () => {
     googleLogIn()
-    .then(() => {
-      toast.success('Login successful')
-    })
-    .catch((err) => {
-      toast.error(err.message)
-    })
-}
+      .then(() => {
+        toast.success("Login successful");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
+  // github
+  const handleGithubLogin = () => {
+    githubLogIn()
+      .then(() => {
+        toast.success("Login successful");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
   return (
     <div className="m-3 lg:sticky lg:top-5">
       <div className="h-[900px] lg:overflow-y-scroll">
@@ -35,11 +46,17 @@ const handleGoogleLogin = () => {
           <h1 className="text-2xl text-center lg:text-left font-semibold">
             Login With
           </h1>
-          <button onClick={handleGoogleLogin} className="btn text-lg bg-white  border border-sky-500 text-sky-500 w-full">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn text-lg bg-white  border border-sky-500 text-sky-500 w-full"
+          >
             <FaGoogle />
             Login with Google
           </button>
-          <button className="btn bg-white text-lg border border-black text-black w-full">
+          <button
+            onClick={handleGithubLogin}
+            className="btn bg-white text-lg border border-black text-black w-full"
+          >
             <FaGithub />
             Login with Github
           </button>

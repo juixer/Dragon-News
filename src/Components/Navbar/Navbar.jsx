@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import profile from "../../assets/user.png";
 import useAuth from "../../Hook/useAuth";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const navLinks = (
@@ -17,7 +18,17 @@ const Navbar = () => {
     </>
   );
   // user
-  const {user}= useAuth();
+  const {user, signOutUser}= useAuth();
+  // signOut
+    const handleSignOut = () => {
+      signOutUser()
+      .then(() => {
+        toast.success('Logout successful')
+      })
+      .catch(err => {
+        toast.error(err.message)
+      })
+    }
   return (
     <div className="navbar bg-base-100 my-3">
       <div className="navbar-start">
@@ -50,12 +61,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal text-xl px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end space-x-5">
-        <img className="w-10 rounded-full" src={user?.photoURL} />
-        <Link to={'/login'}>
+        {user ? <img className="w-10 rounded-full" src={user?.photoURL} /> : <img className="w-10 rounded-full" src={profile} /> }
+        {
+          user ?
+          <p onClick={handleSignOut} className="btn bg-black hover:bg-slate-700 text-white btn-sm">
+            LogOut
+          </p>
+         : <Link to={'/login'}>
           <p className="btn bg-black hover:bg-slate-700 text-white btn-sm">
             Login
           </p>
         </Link>
+        }
       </div>
     </div>
   );
