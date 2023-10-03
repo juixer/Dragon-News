@@ -1,6 +1,7 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import { MagnifyingGlass } from "react-loader-spinner";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer} from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Root = () => {
   const navigation = useNavigation();

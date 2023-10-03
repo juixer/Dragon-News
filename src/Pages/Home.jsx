@@ -47,6 +47,7 @@ const Home = () => {
           <RIghtSideNav />
         </div>
       </div>
+      
     </div>
   );
 };

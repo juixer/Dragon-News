@@ -18,7 +18,7 @@ const RIghtSideNav = () => {
     backgroundRepeat: "no-repeat",
   };
   // google login
-  const { googleLogIn, githubLogIn } = useAuth();
+  const { googleLogIn, githubLogIn,user } = useAuth();
   // google
   const handleGoogleLogin = () => {
     googleLogIn()
@@ -42,7 +42,7 @@ const RIghtSideNav = () => {
   return (
     <div className="m-3 lg:sticky lg:top-5">
       <div className="h-[900px] lg:overflow-y-scroll">
-        <div className="space-y-2">
+        {user ? '' : <div className="space-y-2">
           <h1 className="text-2xl text-center lg:text-left font-semibold">
             Login With
           </h1>
@@ -60,7 +60,7 @@ const RIghtSideNav = () => {
             <FaGithub />
             Login with Github
           </button>
-        </div>
+        </div>}
         <div className="mt-10">
           <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
             Find Us On

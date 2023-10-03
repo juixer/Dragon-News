@@ -12,6 +12,7 @@ import LeftSideNav from "../Components/LeftSideNav/LeftSideNav";
 import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
 import Header from "../Components/Header/Header";
 import Navbar from "../Components/Navbar/Navbar";
+import { Helmet } from "react-helmet";
 
 const CategoryPage = () => {
   const allNews = useLoaderData();
@@ -22,6 +23,7 @@ const CategoryPage = () => {
   console.log(filterId);
   return (
     <div className="max-w-screen-2xl mx-auto px-4 my-5">
+      <Helmet><title>Home</title></Helmet>
         <Header/>
         <Navbar/>
       <div className="grid lg:grid-cols-4">
