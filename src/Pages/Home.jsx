@@ -6,7 +6,7 @@ import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
 
 const Home = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-4">
+    <div className="max-w-screen-2xl mx-auto px-4 my-5">
       <Helmet>
         <title>Home</title>
       </Helmet>
@@ -24,10 +24,10 @@ const Home = () => {
         </Marquee>
       </div>
       <Navbar />
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
         <div className="border">left</div>
-        <div className="md:col-span-2 border">middle</div>
-        <div className="border"><RIghtSideNav/></div>
+        <div className="lg:col-span-2 border">middle</div>
+        <div><RIghtSideNav/></div>
       </div>
     </div>
   );
