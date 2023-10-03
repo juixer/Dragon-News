@@ -18,7 +18,7 @@ const RIghtSideNav = () => {
 
   return (
     <div className="m-3 lg:sticky lg:top-5">
-      <div className="lg:h-[900px] lg:overflow-y-scroll">
+      <div className="h-[900px] lg:overflow-y-scroll">
         <div className="space-y-2">
           <h1 className="text-2xl text-center lg:text-left font-semibold">
             Login With

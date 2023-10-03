@@ -1,8 +1,9 @@
 import { FaStar, FaRegStar, FaEye,FaBookmark, FaShareNodes } from "react-icons/fa6";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 
 const News = ({ news }) => {
-  const { title, image_url, details, rating, total_view, author } = news;
+  const {_id, title, image_url, details, rating, total_view, author } = news;
   return (
     <div className="mx-3">
       <div className="card  mb-10 bg-base-100 shadow-xl">
@@ -24,7 +25,9 @@ const News = ({ news }) => {
           <figure className="py-5">
             <img src={image_url} alt={title} className="rounded-xl" />
           </figure>
-          <p className="text-left">{details}</p>
+          {
+            details.length > 200 ? <p>{details.slice(0,200)} <Link to={`/news/${_id}`} className="text-blue-500 font-bold">Read More...</Link></p> : <p>{details}</p>
+          }
         </div>
         <hr className="mx-10 mb-5"></hr>
         <div className="flex mb-5 justify-between mx-10">

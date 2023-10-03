@@ -13,7 +13,7 @@ const LeftSideNav = () => {
   }, []);
   return (
     <div className="m-3 lg:sticky lg:top-5">
-      <div className="lg:h-[900px] overflow-y-scroll">
+      <div className="h-[900px] overflow-y-scroll">
         <div>
           <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
             All Category

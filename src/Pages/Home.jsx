@@ -6,9 +6,15 @@ import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
 import LeftSideNav from "../Components/LeftSideNav/LeftSideNav";
 import { useLoaderData } from "react-router-dom";
 import News from "../Components/News/News";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  const allNews = useLoaderData();
+  const [allNews, setAllNews] = useState([]);
+  useEffect(() => {
+    fetch("news.json")
+      .then((res) => res.json())
+      .then((data) => setAllNews(data));
+  }, []);
   return (
     <div className="max-w-screen-2xl mx-auto px-4 my-5">
       <Helmet>
@@ -29,15 +35,17 @@ const Home = () => {
       </div>
       <Navbar />
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
-        <div><LeftSideNav/></div>
-        <div className="lg:col-span-2 border">
-        {
-              allNews.map(news => {
-                return <News key={news._id} news={news}/>
-              })
-            }
+        <div>
+          <LeftSideNav />
         </div>
-        <div><RIghtSideNav/></div>
+        <div className="lg:col-span-2 border">
+          {allNews.map((news) => {
+            return <News key={news._id} news={news} />;
+          })}
+        </div>
+        <div>
+          <RIghtSideNav />
+        </div>
       </div>
     </div>
   );
