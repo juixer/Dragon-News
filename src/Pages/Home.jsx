@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import Navbar from "../Components/Navbar/Navbar";
 import { Helmet } from "react-helmet";
 import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
+import LeftSideNav from "../Components/LeftSideNav/LeftSideNav";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
       </div>
       <Navbar />
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
-        <div className="border">left</div>
+        <div><LeftSideNav/></div>
         <div className="lg:col-span-2 border">middle</div>
         <div><RIghtSideNav/></div>
       </div>

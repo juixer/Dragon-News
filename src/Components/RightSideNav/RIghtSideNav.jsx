@@ -17,8 +17,8 @@ const RIghtSideNav = () => {
       };
     
   return (
-    <div>
-      <div className="space-y-2 m-3">
+    <div className="m-3">
+      <div className="space-y-2">
         <h1 className="text-2xl text-center lg:text-left font-semibold">Login With</h1>
         <button className="btn text-lg bg-white  border border-sky-500 text-sky-500 w-full">
           <FaGoogle />
@@ -29,7 +29,7 @@ const RIghtSideNav = () => {
           Login with Github
         </button>
       </div>
-      <div className="mt-10 m-3">
+      <div className="mt-10">
         <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">Find Us On</h1>
         <a
           href="#"
@@ -53,7 +53,7 @@ const RIghtSideNav = () => {
           Instagram
         </a>
       </div>
-      <div className="mt-10 m-3 space-y-2">
+      <div className="mt-10 space-y-2">
         <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">Q-Zone</h1>
         <div className="flex justify-center flex-col items-center">
           <img src={qZone1}></img>
@@ -61,7 +61,7 @@ const RIghtSideNav = () => {
           <img src={qZone3}></img>
         </div>
       </div>
-      <div className="mt-10 m-3 px-5 py-20 rounded-xl" style={bg}>
+      <div className="mt-10 px-5 py-20 rounded-xl" style={bg}>
             <h1 className="text-4xl mb-10 text-white font-bold text-center">
             Create an Amazing Newspaper
             </h1>
