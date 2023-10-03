@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Header from "../Components/Header/Header";
 import Navbar from "../Components/Navbar/Navbar";
 import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
+import { Helmet } from "react-helmet";
 
 const NewsDetails = () => {
     const {id} = useParams();
@@ -11,6 +12,7 @@ const NewsDetails = () => {
     console.log(foundNews);
     return (
         <div className="max-w-screen-2xl mx-auto px-4 my-5">
+            <Helmet> <title>{title}</title></Helmet>
             <Header/>
             <Navbar/>
             <div className="grid lg:grid-cols-4 gap-5">

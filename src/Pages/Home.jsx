@@ -4,9 +4,9 @@ import Navbar from "../Components/Navbar/Navbar";
 import { Helmet } from "react-helmet";
 import RIghtSideNav from "../Components/RightSideNav/RIghtSideNav";
 import LeftSideNav from "../Components/LeftSideNav/LeftSideNav";
-import { useLoaderData } from "react-router-dom";
 import News from "../Components/News/News";
 import { useEffect, useState } from "react";
+
 
 const Home = () => {
   const [allNews, setAllNews] = useState([]);
@@ -38,7 +38,7 @@ const Home = () => {
         <div>
           <LeftSideNav />
         </div>
-        <div className="lg:col-span-2 border">
+        <div className="lg:col-span-2">
           {allNews.map((news) => {
             return <News key={news._id} news={news} />;
           })}
