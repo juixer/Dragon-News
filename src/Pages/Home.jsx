@@ -10,11 +10,16 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
   const [allNews, setAllNews] = useState([]);
+  const [display, setDisplay] = useState(true);
   useEffect(() => {
     fetch("news.json")
       .then((res) => res.json())
       .then((data) => setAllNews(data));
-  }, []);
+      }, [allNews]);
+  // show more 
+  const handleShowMore = () =>{
+    setDisplay(!display)
+  }
   return (
     <div className="max-w-screen-2xl mx-auto px-4 my-5">
       <Helmet>
@@ -39,9 +44,16 @@ const Home = () => {
           <LeftSideNav />
         </div>
         <div className="lg:col-span-2">
-          {allNews.map((news) => {
+        {display ? <div>{allNews.slice(0,9).map((news) => {
             return <News key={news._id} news={news} />;
-          })}
+          })}</div> : <div>{allNews.map((news) => {
+            return <News key={news._id} news={news} />;
+          })}</div>}
+          <div className="flex justify-center">
+          {
+            display ? <button onClick={handleShowMore} className="btn btn-outline btn-accent">Show More</button> : <button onClick={handleShowMore} className="btn btn-outline btn-accent">Show Less</button>
+          }
+          </div>
         </div>
         <div>
           <RIghtSideNav />

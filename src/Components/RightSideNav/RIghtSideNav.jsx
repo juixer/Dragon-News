@@ -5,9 +5,6 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa6";
-import qZone1 from "../../assets/qZone1.png";
-import qZone2 from "../../assets/qZone2.png";
-import qZone3 from "../../assets/qZone3.png";
 import adBg from "../../assets/bg.png";
 import useAuth from "../../Hook/useAuth";
 import { toast } from "react-toastify";
@@ -86,16 +83,6 @@ const RIghtSideNav = () => {
             <FaInstagram />
             Instagram
           </a>
-        </div>
-        <div className="mt-10 space-y-2">
-          <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
-            Q-Zone
-          </h1>
-          <div className="flex justify-center flex-col space-y-10">
-            <img src={qZone1}></img>
-            <img src={qZone2}></img>
-            <img src={qZone3}></img>
-          </div>
         </div>
         <div className="mt-10 px-5 py-20 rounded-xl" style={bg}>
           <h1 className="text-4xl mb-10 text-white font-bold text-center">

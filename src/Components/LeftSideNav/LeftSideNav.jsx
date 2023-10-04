@@ -15,51 +15,13 @@ const LeftSideNav = () => {
   return (
     <div className="m-3 lg:sticky lg:top-5">
       <div className="h-[900px] overflow-y-scroll">
-        <div className="flex flex-row flex-wrap justify-center items-center lg:flex-col">
+        <div className="flex flex-row flex-wrap  justify-center items-center lg:flex-col">
           <Link to={'/'}><h1 className="text-2xl hover:bg-slate-200 rounded-lg p-3 text-center lg:text-left font-semibold">
             All Category
           </h1></Link>
           {categories.map((category) => {
             return <Category key={category.id} category={category} />;
           })}
-        </div>
-        <div className="space-y-10 mt-10">
-          <div className="flex flex-col justify-center">
-            <img src={img1} />
-            <h1 className="text-xl text-center lg:text-left font-medium mb-3">
-              Bayern Slams Authorities Over Flight Delay to Club World Cup
-            </h1>
-            <div className="flex gap-10">
-              <p className="font-bold">Sports</p>
-              <p className="font-extralight flex items-center gap-3">
-                <FaCalendar /> Jan 4, 2022
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={img2} />
-            <h1 className="text-xl text-center lg:text-left font-medium mb-3">
-              Bayern Slams Authorities Over Flight Delay to Club World Cup
-            </h1>
-            <div className="flex gap-10">
-              <p className="font-bold">Sports</p>
-              <p className="font-extralight flex items-center gap-3">
-                <FaCalendar /> Jan 4, 2022
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={img3} />
-            <h1 className="text-xl text-center lg:text-left font-medium mb-3">
-              Bayern Slams Authorities Over Flight Delay to Club World Cup
-            </h1>
-            <div className="flex gap-10">
-              <p className="font-bold">Sports</p>
-              <p className="font-extralight flex items-center gap-3">
-                <FaCalendar /> Jan 4, 2022
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
