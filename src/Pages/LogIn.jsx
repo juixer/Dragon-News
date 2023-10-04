@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import { Helmet } from "react-helmet";
 import { useRef, useState } from "react";
@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 
 const LogIn = () => {
   const [showPass, setPassword] = useState(true);
+  const location = useLocation()
   const navigate = useNavigate();
   const { signInWithEmail, forgetPassword } = useAuth();
   // signIN
@@ -21,7 +22,7 @@ const LogIn = () => {
         toast.success("LogIn successful");
       })
       .catch((err) => toast.error(err.message));
-    navigate("/");
+    navigate(location?.state ? location.state : '/');
   };
   // forget password
   const emailRef = useRef();

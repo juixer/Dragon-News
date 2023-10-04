@@ -71,7 +71,7 @@ const CategoryPage = () => {
                       />
                     </figure>
                     {news.details.length > 200 ? (
-                      <p>
+                      <p className="text-left">
                         {news.details.slice(0, 200)}{" "}
                         <Link
                           to={`/news/${news._id}`}
@@ -81,7 +81,7 @@ const CategoryPage = () => {
                         </Link>
                       </p>
                     ) : (
-                      <p>{news.details}</p>
+                      <p className="text-left">{news.details}</p>
                     )}
                   </div>
                   <hr className="mx-10 mb-5"></hr>

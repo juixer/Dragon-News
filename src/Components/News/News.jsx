@@ -26,7 +26,7 @@ const News = ({ news }) => {
             <img src={image_url} alt={title} className="rounded-xl" />
           </figure>
           {
-            details.length > 200 ? <p>{details.slice(0,200)} <Link to={`/news/${_id}`} className="text-blue-500 font-bold">Read More...</Link></p> : <p>{details}</p>
+            details.length > 200 ? <p className="text-left">{details.slice(0,200)} <Link to={`/news/${_id}`} className="text-blue-500 font-bold">Read More...</Link></p> : <p className="text-left">{details}</p>
           }
         </div>
         <hr className="mx-10 mb-5"></hr>

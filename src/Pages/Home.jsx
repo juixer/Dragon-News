@@ -27,10 +27,10 @@ const Home = () => {
         </button>
         <Marquee speed={100}>
           <p className="mr-10 text-xl">Luffy is dead!</p>
-          <p className="mr-10 text-xl">FireForce can not rid off rain!</p>
-          <p className="mr-10 text-xl">Counter Strick 2 is out now!</p>
-          <p className="mr-10 text-xl">Horimiya is top tier anime!</p>
-          <p className="mr-10 text-xl">Ben 10 becomes Brimstone</p>
+          <p className="mr-10 text-xl">Valorant giving all free skins!</p>
+          <p className="mr-10 text-xl">Counter-Strike 2 is out now!</p>
+          <p className="mr-10 text-xl">Apex Legend is dead game!</p>
+          <p className="mr-10 text-xl">Ben 10 becomes Brimstone!</p>
         </Marquee>
       </div>
       <Navbar />
