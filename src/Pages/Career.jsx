@@ -1,6 +1,6 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
+import { Helmet } from "react-helmet";
 
 const Career = () => {
   return (
@@ -8,6 +8,7 @@ const Career = () => {
       <Header />
       <Navbar />
       <div className="mt-10">
+        <Helmet><title>Career</title></Helmet>
         <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
         1. Introduction to the Career Page:
         </h1>
@@ -20,10 +21,6 @@ const Career = () => {
         3. Career Advice and Tips:
         </h1>
         <p className="text-xl mb-5 font-light">Share valuable career advice and tips for job seekers. Topics could include resume writing, interview preparation, networking, and career development strategies. You can also include articles or links to in-depth guides on these topics.</p>
-        <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
-        1. Introduction to the Career Page:
-        </h1>
-        <p className="text-xl mb-5 font-light">Begin with a brief introduction to the purpose of the page. Explain that this section is dedicated to helping your readers with career-related information, advice, and resources.</p>
         <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
         4. Industry Insights:
         </h1>
@@ -55,7 +52,7 @@ const Career = () => {
         <h1 className="text-2xl text-center lg:text-left font-semibold mb-3">
         11. Contact Information:
         </h1>
-        <p className="text-xl mb-5 font-light">Remember to keep the content on your "CAREER" page updated and relevant to ensure that your readers find it valuable and engaging. Additionally, consider adding images, infographics, or videos to make the page more visually appealing.</p>
+        <p className="text-xl mb-5 font-light">Remember to keep the content on your CAREER page updated and relevant to ensure that your readers find it valuable and engaging. Additionally, consider adding images, infographics, or videos to make the page more visually appealing.</p>
       </div>
     </div>
   );

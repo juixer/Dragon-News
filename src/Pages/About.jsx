@@ -1,10 +1,12 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import Header from "../Components/Header/Header";
 import Navbar from "../Components/Navbar/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 my-5">
+      <Helmet><title>About Us</title></Helmet>
         <Header/>
         <Navbar/>
       <div className="mt-10">
