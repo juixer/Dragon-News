@@ -15,7 +15,7 @@ const LeftSideNav = () => {
   return (
     <div className="m-3 lg:sticky lg:top-5">
       <div className="h-[900px] overflow-y-scroll">
-        <div>
+        <div className="flex flex-row flex-wrap justify-center items-center lg:flex-col">
           <Link to={'/'}><h1 className="text-2xl hover:bg-slate-200 rounded-lg p-3 text-center lg:text-left font-semibold">
             All Category
           </h1></Link>

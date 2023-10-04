@@ -61,7 +61,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal text-xl px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end space-x-5">
-        {user ? <img className="w-10 rounded-full" src={user?.photoURL} /> : <img className="w-10 rounded-full" src={profile} /> }
+        {user ? <img className="w-10 h-10 rounded-full" src={user?.photoURL} /> : <img className="w-10 rounded-full" src={profile} /> }
         {
           user ?
           <p onClick={handleSignOut} className="btn bg-black hover:bg-slate-700 text-white btn-sm">
