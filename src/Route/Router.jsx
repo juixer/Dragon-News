@@ -6,6 +6,8 @@ import CategoryPage from "../Pages/CategoryPage";
 import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import About from "../Pages/About";
+import Career from "../Pages/Career";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +35,14 @@ const Router = createBrowserRouter([
         {
           path:'/register',
           element:<Register/>
+        },
+        {
+          path:'/about',
+          element:<About/>
+        },
+        {
+          path:'/career',
+          element:<Career/>
         }
     ]
   },

@@ -2,6 +2,7 @@ import { Outlet, useNavigation } from "react-router-dom";
 import { MagnifyingGlass } from "react-loader-spinner";
 import { ToastContainer} from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Footer from "../Components/Footer/Footer";
 
 const Root = () => {
   const navigation = useNavigation();
@@ -23,6 +24,7 @@ const Root = () => {
       ) : (
         <Outlet />
       )}
+      <Footer/>
       <ToastContainer/>
     </div>
   );
